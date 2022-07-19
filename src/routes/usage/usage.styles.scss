@@ -1,0 +1,40 @@
+.usage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .cards {
+            display: flex;
+            
+            .card-1 {
+                box-sizing: border-box;
+                border: 1px solid rgba(102, 77, 229, 255);
+                height: 200px;
+                width: 200px;
+                border-radius: 5px;
+                padding: 5px;
+                margin-right: 20px;
+            }
+
+            .card-2 {
+                box-sizing: border-box;
+                border: 1px solid lightgray;
+                height: 200px;
+                width: 200px;
+                border-radius: 5px;
+                padding: 5px;
+            }
+    }
+}
+
+Button {
+    margin-top: 40px;
+    width: 410px;
+}
+
+}
