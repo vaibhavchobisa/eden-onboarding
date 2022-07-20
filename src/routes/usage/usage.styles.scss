@@ -63,7 +63,15 @@
 
 Button {
     margin-top: 40px;
-    width: 425px;
+    max-width: 405px;
+    min-width: 375px;
 }
 
+}
+
+@media only screen and (max-width:400px) {
+    .cards {
+        display: flex;
+        justify-content: center;
+    }
 }

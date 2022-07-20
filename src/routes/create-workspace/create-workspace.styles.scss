@@ -34,7 +34,8 @@
 
         &.first {
             height: 40px;
-            width: 400px;
+            max-width: 400px;
+            min-width: 365px;
             font-size: 13px;
             margin-bottom: 10px;
             border-width: 1px;
@@ -42,17 +43,19 @@
         }
 
         &.second {
-            width: 295px;
+            max-width: 260px;
+            min-width: 10px;
         }
 
         &.disabled {
-            width: 100px;
+            max-width: 100px;
         }
     }
 
     Button {
         margin-top: 40px;
-        width: 410px;
+        max-width: 405px;
+        min-width: 375px;
     }
 }
 }

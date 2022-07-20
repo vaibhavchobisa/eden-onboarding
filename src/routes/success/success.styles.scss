@@ -12,6 +12,7 @@
 
     Button {
             margin-top: 40px;
-            width: 410px;
+            max-width: 405px;
+            min-width: 375px;
         }
 }
