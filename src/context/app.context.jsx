@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 
 // as the actual value you want to access
-export const ClickContext = createContext({
+export const AppContext = createContext({
     isFirstClicked: false,
     setIsFirstClicked: () => { },
 
@@ -12,15 +12,15 @@ export const ClickContext = createContext({
     setIsThirdClicked: () => { },
 });
 
-export const ClickProvider = ({ children }) => {
+export const AppProvider = ({ children }) => {
     const [isFirstClicked, setIsFirstClicked] = useState(false);
     const [isSecondClicked, setIsSecondClicked] = useState(false);
     const [isThirdClicked, setIsThirdClicked] = useState(false);
     const value = { isFirstClicked, setIsFirstClicked, isSecondClicked, setIsSecondClicked, isThirdClicked, setIsThirdClicked };
 
     return (
-        <ClickContext.Provider value={value}>
+        <AppContext.Provider value={value}>
             {children}
-        </ClickContext.Provider>
+        </AppContext.Provider>
     );
 };

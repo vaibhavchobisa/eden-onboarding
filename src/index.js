@@ -5,16 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter } from 'react-router-dom';
-import { ClickProvider } from './context/click.context';
+import { AppProvider } from './context/app.context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ClickProvider>
+    <AppProvider>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </ClickProvider>
+    </AppProvider>
   </React.StrictMode>
 );
 

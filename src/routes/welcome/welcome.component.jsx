@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 
 import { useState } from "react";
-import { ClickContext } from "../../context/click.context";
+import { AppContext } from "../../context/app.context";
 
 const defaultFormFields = {
     fullName: '',
@@ -16,7 +16,7 @@ const Welcome = () => {
     const [formFields, setFormFields] = useState(defaultFormFields);
     const { fullName, displayName } = formFields;
 
-    const { setIsFirstClicked } = useContext(ClickContext);
+    const { setIsFirstClicked } = useContext(AppContext);
 
     const navigate = useNavigate();
 

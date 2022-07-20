@@ -2,7 +2,7 @@ import "./create-workspace.styles.scss";
 import Button from "../../components/button/button.component";
 import { useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
-import { ClickContext } from "../../context/click.context";
+import { AppContext } from "../../context/app.context";
 
 const defaultFormFields = {
     workspaceName: '',
@@ -15,7 +15,7 @@ const CreateWorkspace = () => {
     const [formFields, setFormFields] = useState(defaultFormFields);
     const { workspaceName, workspaceUrl } = formFields;
 
-    const { setIsSecondClicked } = useContext(ClickContext);
+    const { setIsSecondClicked } = useContext(AppContext);
 
     const navigate = useNavigate();
 

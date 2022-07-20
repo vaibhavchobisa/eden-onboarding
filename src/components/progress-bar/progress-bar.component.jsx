@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import { ClickContext } from "../../context/click.context";
+import { AppContext } from "../../context/app.context";
 import "./progress-bar.styles.scss";
 
 // const goTo = { welcome: '/', workspace: '/workspace', usage: '/usage' }
 
 const ProgressBar = () => {
-    const { isFirstClicked, isSecondClicked, isThirdClicked } = useContext(ClickContext);
+    const { isFirstClicked, isSecondClicked, isThirdClicked } = useContext(AppContext);
 
     let addClass;
 

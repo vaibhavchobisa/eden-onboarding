@@ -6,7 +6,7 @@ import Usage from "./routes/usage/usage.component";
 import Success from "./routes/success/success.component";
 import "./App.scss"
 
-// rgba(102,77,229,255)
+// rgb(102,77,229)
 
 const App = () => {
   return (
