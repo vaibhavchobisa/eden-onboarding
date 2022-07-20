@@ -2,14 +2,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
 
     .card-container {
         display: flex;
         flex-direction: column;
         align-items: center;
+        flex-wrap: wrap;
         
         .cards {
             display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            // clamp: 
             
             .card-1 {
                 box-sizing: border-box;
@@ -17,12 +22,15 @@
                 height: 200px;
                 width: 200px;
                 border-radius: 5px;
-                padding: 5px;
-                margin-right: 20px;
+                padding-top: 15px;
+                padding-bottom: 10px;
+                padding-left: 25px;
+                padding-right: 10px;
+                // margin-right: 20px;
                 cursor: pointer;
 
                 img {
-
+                    height: 40px;
                 }
             }
 
@@ -32,11 +40,16 @@
                 height: 200px;
                 width: 200px;
                 border-radius: 5px;
-                padding: 5px;
+                padding-top: 15px;
+                padding-bottom: 10px;
+                padding-left: 25px;
+                padding-right: 10px;
                 cursor: pointer;
 
                 img {
-                    
+                    height: 40px;
+                    position: relative;
+                    top: 4px;
                 }
             }
 
@@ -50,7 +63,7 @@
 
 Button {
     margin-top: 40px;
-    width: 410px;
+    width: 425px;
 }
 
 }

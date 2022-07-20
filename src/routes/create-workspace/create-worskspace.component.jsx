@@ -41,7 +41,7 @@ const CreateWorkspace = () => {
                 <label htmlFor="workspaceUrl">Workspace URL <span>(optional)</span></label>
                 <div>
                     <input className="disabled" disabled type="text" value="www.eden.com/" />
-                    <input type="text" placeholder="Example" name="workspaceUrl" id="workspaceUrl" value={workspaceUrl} onChange={handleChange} />
+                    <input className="second" type="text" placeholder="Example" name="workspaceUrl" id="workspaceUrl" value={workspaceUrl} onChange={handleChange} />
                 </div>
                 <Button type="submit">Create Workspace</Button>
             </form>
