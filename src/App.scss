@@ -2,10 +2,6 @@
     font-family: 'Inter', sans-serif;
 }
 
-body {
-    // overflow: hidden;
-}
-
 h1 {
     font-weight: 700;
 }
@@ -21,3 +17,15 @@ h2 {
 p {
     color: gray;
 }
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+// @media screen and (max-width:600px) {
+//     label {
+
+//     }
+// }
