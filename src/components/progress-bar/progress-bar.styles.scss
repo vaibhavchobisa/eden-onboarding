@@ -55,30 +55,31 @@ li {
         border-color: rgba(102, 77, 229, 255);
         background-color: rgba(102, 77, 229, 255);
     }
-
+    
     +li:after {
         background: linear-gradient(90deg, rgba(102, 77, 229, 255) 50%, #ddd 50%);
     }
+    
 }
 
 .active-2 {
-
+    
     &:before {
         color: #fff;
         border-color: rgba(102, 77, 229, 255);
         background-color: rgba(102, 77, 229, 255);
-        }
-
+    }
+    
     +li:before {
         color: #fff;
         border-color: rgba(102, 77, 229, 255);
         background-color: rgba(102, 77, 229, 255);
     }
-
+    
     +li:after {
         background: rgba(102, 77, 229, 255);
     }
-
+    
     +li+li:after {
         background: linear-gradient(90deg, rgba(102, 77, 229, 255) 50%, #ddd 50%);
     }

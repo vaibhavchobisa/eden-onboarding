@@ -2,21 +2,18 @@ import "./welcome.styles.scss";
 import Button from "../../components/button/button.component";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
-
-import { useState } from "react";
 import { AppContext } from "../../context/app.context";
-
-const defaultFormFields = {
-    fullName: '',
-    displayName: ''
-};
 
 const Welcome = () => {
 
-    const [formFields, setFormFields] = useState(defaultFormFields);
-    const { fullName, displayName } = formFields;
-
-    const { setIsFirstClicked } = useContext(AppContext);
+    const {
+        setIsFirstClicked,
+        setFormFields,
+        formFields,
+        fullName,
+        displayName
+    }
+        = useContext(AppContext);
 
     const navigate = useNavigate();
 
