@@ -1,36 +1,28 @@
 import "./usage.styles.scss";
 import Button from "../../components/button/button.component";
 import { useNavigate } from "react-router-dom";
-import { useContext, useState } from "react";
-import { AppContext } from "../../context/app.context";
+import { useState } from "react";
 
-import { Link } from "react-router-dom";
+const Usage = ({ setPath }) => {
 
-const Usage = () => {
-
-    const { setIsThirdClicked } = useContext(AppContext);
+    setPath(window.location.pathname);
 
     const navigate = useNavigate();
     const onNavigateHandler = () => {
-        setIsThirdClicked(true);
         navigate("/success")
     };
 
     const [isSelected1, setIsSelected1] = useState(true);
     const [isSelected2, setIsSelected2] = useState(false);
 
-    const onClickHandler1 = (event) => {
-        setIsSelected1(current => !current);
-        if (isSelected2 === true) {
-            setIsSelected2(false);
-        };
+    const onClickHandler1 = (e) => {
+        setIsSelected1(true);
+        setIsSelected2(false);
     };
 
-    const onClickHandler2 = (event) => {
-        setIsSelected2(current => !current);
-        if (isSelected1 === true) {
-            setIsSelected1(false);
-        };
+    const onClickHandler2 = (e) => {
+        setIsSelected2(true);
+        setIsSelected1(false);
     };
 
     return (

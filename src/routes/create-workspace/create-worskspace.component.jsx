@@ -1,26 +1,23 @@
 import "./create-workspace.styles.scss";
 import Button from "../../components/button/button.component";
 import { useNavigate } from "react-router-dom";
-import { useContext, useState } from "react";
-import { AppContext } from "../../context/app.context";
+import { useState } from "react";
 
 const defaultFormFields = {
     workspaceName: '',
     workspaceUrl: ''
 };
 
-const CreateWorkspace = () => {
+const CreateWorkspace = ({ setPath }) => {
 
+    setPath(window.location.pathname);
 
     const [formFields, setFormFields] = useState(defaultFormFields);
     const { workspaceName, workspaceUrl } = formFields;
 
-    const { setIsSecondClicked } = useContext(AppContext);
-
     const navigate = useNavigate();
 
-    const onSubmitHandler = (event) => {
-        setIsSecondClicked(true);
+    const onSubmitHandler = (e) => {
         navigate("/usage")
     };
 
@@ -37,11 +34,11 @@ const CreateWorkspace = () => {
             </div>
             <form onSubmit={onSubmitHandler} className="form-2">
                 <label htmlFor="workspaceName">Workspace Name</label>
-                <input className="first" required type="text" placeholder="Eden" name="workspaceName" id="workspaceName" value={workspaceName} onChange={handleChange} />
+                <input className="first" required type="text" placeholder="Swimming Tracker" name="workspaceName" id="workspaceName" value={workspaceName} onChange={handleChange} />
                 <label htmlFor="workspaceUrl">Workspace URL <span>(optional)</span></label>
                 <div>
                     <input className="disabled" disabled type="text" value="www.eden.com/" />
-                    <input className="second" type="text" placeholder="Example" name="workspaceUrl" id="workspaceUrl" value={workspaceUrl} onChange={handleChange} />
+                    <input className="second" type="text" placeholder="swimming-tracker" name="workspaceUrl" id="workspaceUrl" value={workspaceUrl.toLocaleLowerCase()} onChange={handleChange} />
                 </div>
                 <Button type="submit">Create Workspace</Button>
             </form>

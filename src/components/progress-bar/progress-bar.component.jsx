@@ -1,31 +1,29 @@
-import { useContext } from "react";
-import { AppContext } from "../../context/app.context";
 import "./progress-bar.styles.scss";
 
-// const goTo = { welcome: '/', workspace: '/workspace', usage: '/usage' }
-
-const ProgressBar = () => {
-    const { isFirstClicked, isSecondClicked, isThirdClicked } = useContext(AppContext);
+const ProgressBar = ({ path }) => {
 
     let addClass;
 
-    if (isFirstClicked) {
-        addClass = "active-2";
+    if (path === '/workspace') {
+        addClass = "active-1 active-2";
     }
-    if (isSecondClicked) {
-        addClass = "active-3";
+    else if (path === '/usage') {
+        addClass = "active-1 active-3";
     }
-    if (isThirdClicked) {
-        addClass = "active-4";
+    else if (path === '/success') {
+        addClass = "active-1 active-4";
+    }
+    else if (path === '/') {
+        addClass = "active-1";
     }
 
     return (
         <div className="container">
             <ul className="progressbar">
-                <li className={`active-1 ${addClass}`}></li>
-                <li className=""></li>
-                <li className=""></li>
-                <li className=""></li>
+                <li className={addClass}></li>
+                <li></li>
+                <li></li>
+                <li></li>
             </ul>
         </div>
     );

@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AppContext } from "../../context/app.context";
 
-const Welcome = () => {
+const Welcome = ({ setPath }) => {
+    setPath(window.location.pathname);
 
     const {
-        setIsFirstClicked,
         setFormFields,
         formFields,
         fullName,
@@ -17,13 +17,12 @@ const Welcome = () => {
 
     const navigate = useNavigate();
 
-    const onSubmitHandler = (event) => {
-        setIsFirstClicked(true);
+    const onSubmitHandler = (e) => {
         navigate("/workspace");
     };
 
-    const handleChange = (event) => {
-        const { name, value } = event.target;
+    const handleChange = (e) => {
+        const { name, value } = e.target;
         setFormFields({ ...formFields, [name]: value });
     };
 

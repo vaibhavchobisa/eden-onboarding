@@ -2,7 +2,7 @@ import "./header.styles.scss";
 import ProgressBar from "../../components/progress-bar/progress-bar.component";
 import { Outlet } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ path }) => {
     return (
         <>
             <div className="header">
@@ -10,7 +10,7 @@ const Header = () => {
                     <img src="./logo/logo.png" alt="logo" />
                     <h1>Eden</h1>
                 </div>
-                <ProgressBar />
+                <ProgressBar path={path} />
             </div>
             <Outlet />
         </>

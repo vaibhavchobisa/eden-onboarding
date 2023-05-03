@@ -5,14 +5,12 @@ import { useContext } from "react";
 import { AppContext } from "../../context/app.context";
 import { defaultFormFields } from "../../context/app.context";
 
-const Success = () => {
+const Success = ({ setPath }) => {
+    setPath(window.location.pathname);
 
-    const { displayName, setIsFirstClicked, setIsSecondClicked, setIsThirdClicked, setFormFields } = useContext(AppContext);
+    const { displayName, setFormFields } = useContext(AppContext);
     const navigate = useNavigate();
     const onNavigateHandler = () => {
-        setIsFirstClicked(false);
-        setIsSecondClicked(false);
-        setIsThirdClicked(false);
         setFormFields(defaultFormFields);
         navigate("/");
     };
